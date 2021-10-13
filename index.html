@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- importing tensorflow and mobileNet-->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+    <title>MobileNet App</title>
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="stylesheets/normalize.css">
+    <link rel="stylesheet" href="stylesheets/skeleton.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="six columns">
+                <div class="container" id="imagePlaceholder"></div>
+                <div class="container" id="inputThumnail">
+                    <!-- video input request and handlinggoes here -->
+                    <input type="file" accept="image/*" id="file-input">
+                </div>
+                <div class="container" id="btnWrapper">
+                    <!-- action button sends the video to the server (for now)
+                     ** later on-stream video to server as filming to save time-->
+                    <button class="button-primary container" type="submit" value="submit input" id="submit-btn">
+                        submit
+                    </button>
+                </div>
+            </div>
+
+            <div class="six columns">
+                <div class="container">Predictions
+                    <div class="row">
+                        <div class="six columns">
+                            <ol id="prediction-list">
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<script src="./src/index.js"></script>
+</body>
+</html>
